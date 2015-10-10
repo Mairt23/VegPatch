@@ -3,8 +3,8 @@ class CreateVegetables < ActiveRecord::Migration
     create_table :vegetables do |t|
       t.string :name
       t.text :instructions
-      t.text, :description
-      t.text, :tips
+      t.text :description
+      t.text :tips
       t.decimal :easiness_to_grow_rating
 
       t.timestamps null: false
