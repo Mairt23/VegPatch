@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151007204426) do
+ActiveRecord::Schema.define(version: 20151010163834) do
 
   create_table "vegetables", force: :cascade do |t|
     t.string   "name"
@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(version: 20151007204426) do
     t.decimal  "easiness_to_grow_rating"
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
+    t.string   "image_url"
+    t.string   "string"
   end
 
 end
