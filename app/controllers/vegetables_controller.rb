@@ -69,6 +69,6 @@ class VegetablesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def vegetable_params
-      params.require(:vegetable).permit(:name, :instructions, :description, :tips, :easiness_to_grow_rating)
+      params.require(:vegetable).permit(:name, :instructions, :description, :tips, :easiness_to_grow_rating, :image_url)
     end
 end

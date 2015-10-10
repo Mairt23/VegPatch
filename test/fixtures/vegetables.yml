@@ -6,6 +6,7 @@ one:
   description: 
   tips: 
   easiness_to_grow_rating: 9.99
+  image_url: MyString
 
 two:
   name: MyString
@@ -13,3 +14,4 @@ two:
   description: 
   tips: 
   easiness_to_grow_rating: 9.99
+  image_url: MyString

@@ -27,7 +27,7 @@ Vegetable.create!(name: 'carrot',
 		inches above ground level to make sure the carrot fly can't
 		find your carrots.
 	</p>},
-	image_url: 'carrot.JPEG',
+	image_url: 'carrot.jpg',
 	easiness_to_grow_rating: 9)
 
 Vegetable.create!(name: 'cabbage',
@@ -48,6 +48,6 @@ Vegetable.create!(name: 'cabbage',
 		protection around your plants otherwise all of the greenest,
 		most succulent leaves will be severely damaged.
 	</p>},
-	image_url: 'cabbage.JPEG',
+	image_url: 'cabbage.JPG',
 	easiness_to_grow_rating: 7)
 	
