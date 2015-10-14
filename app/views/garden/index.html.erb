@@ -1,2 +1,18 @@
-<h1>Garden#index</h1>
-<p>Find me in app/views/garden/index.html.erb</p>
+<% if notice %>
+  <p id="notice"><%= notice %></p>
+<% end %>
+
+<h1>Your Veggie database</h1>
+
+<% @vegetables.each do |vegetable| %>
+  <div class="entry">
+    <%= image_tag(vegetable.image_url) %>
+    <h3><%= vegetable.name %></h3>
+	<%= sanitize vegetable.instructions %>
+	<%= sanitize vegetable.description %>
+    <%= sanitize vegetable.tips %>
+    <div class="rating_line">
+      <span class="rating"><%= vegetable.easiness_to_grow_rating %></span>
+    </div>
+  </div>
+<% end %>
