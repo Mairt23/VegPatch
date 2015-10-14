@@ -50,4 +50,3 @@ Vegetable.create!(name: 'cabbage',
 	</p>},
 	image_url: 'cabbage.JPG',
 	easiness_to_grow_rating: 7)
-	

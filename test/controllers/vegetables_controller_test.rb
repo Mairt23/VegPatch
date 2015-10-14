@@ -46,4 +46,24 @@ class VegetablesControllerTest < ActionController::TestCase
 
     assert_redirected_to vegetables_path
   end
+  test "vegetable is not valid without a unique name" do
+		vegetable = Vegetable.new(	:name  => vegetables(:validtest1).name,
+									:instructions 	=> "xxx",
+									:description 	=> "xxx", 
+									:easiness_to_grow_rating => 1, 
+									:image_url   	=> "barney.gif")
+
+		assert vegetable.invalid?
+		assert_equal ["has already been taken"], vegetable.errors[:name]
+	end
+	test "vegetable is not valid without a name of at least 2 characters" do
+		vegetable = Vegetable.new(	:name  => "b",
+									:instructions 	=> "xxx",
+									:description 	=> "xxx", 
+									:easiness_to_grow_rating => 1, 
+									:image_url   	=> "barney.gif")
+
+		assert vegetable.invalid?
+		assert_equal ["is too short (minimum is 2 characters)"], vegetable.errors[:name]
+	end
 end
