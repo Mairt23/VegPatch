@@ -1,17 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
+  name: TestString1
   instructions: MyText
-  description: 
-  tips: 
-  easiness_to_grow_rating: 9.99
+  description: MyText
+  tips: Text
+  easiness_to_grow_rating: 8
   image_url: MyString
 
 two:
-  name: MyString
+  name: MyString2
   instructions: MyText
-  description: 
-  tips: 
-  easiness_to_grow_rating: 9.99
+  description: MyText
+  tips: Text
+  easiness_to_grow_rating: 5
   image_url: MyString

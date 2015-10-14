@@ -18,7 +18,7 @@ class VegetablesControllerTest < ActionController::TestCase
 
   test "should create vegetable" do
     assert_difference('Vegetable.count') do
-      post :create, vegetable: { description: @vegetable.description, easiness_to_grow_rating: @vegetable.easiness_to_grow_rating, image_url: @vegetable.image_url, instructions: @vegetable.instructions, name: @vegetable.name, tips: @vegetable.tips }
+      post :create, vegetable: { description: @vegetable.description, easiness_to_grow_rating: @vegetable.easiness_to_grow_rating, image_url: @vegetable.image_url, instructions: @vegetable.instructions, name: "New Veg", tips: @vegetable.tips }
     end
 
     assert_redirected_to vegetable_path(assigns(:vegetable))

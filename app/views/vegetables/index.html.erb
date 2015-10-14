@@ -14,20 +14,37 @@
 				<dl>
 					<dt><%= vegetable.name %></dt>
 					<dd>
-						<%= truncate strip_tags(vegetable.instructions), length: 120 %>
-					</dd>
-					<dd>
-						<%= truncate strip_tags(vegetable.description), length: 120 %>
-					</dd>
-					<dd>
-						<%= truncate strip_tags(vegetable.tips), length: 120 %>
+						<%= truncate strip_tags(vegetable.instructions), length: 150 %>
 					</dd>
 				</dl>
-			</td class='list_actions'>
-			<td><%= link_to 'Show', vegetable %></td>
-			<td><%= link_to 'Edit', edit_vegetable_path(vegetable) %></td>
-			<td><%= link_to 'Destroy', vegetable, method: :delete, 
-			data: { confirm: 'Are you sure?' } %></td>
+			</td>
+			<td class='list_description'>
+				<dl>
+					<dd>
+						<%= truncate strip_tags(vegetable.description), length: 150 %>
+					</dd>
+				</dl>
+			</td>
+			<td class='list_description'>
+				<dl>
+					<dd>
+						<%= truncate strip_tags(vegetable.tips), length: 150 %>
+					</dd>
+				</dl>
+			</td>
+			<td>
+				<dt>Easiness to Grow Rating</dt>
+					<dd>
+						<%= vegetable.easiness_to_grow_rating %>/10
+					</dd>
+				</dt>
+			</td>
+			<td class='list_actions'>
+				<%= link_to 'Show', vegetable %>
+				<%= link_to 'Edit', edit_vegetable_path(vegetable) %>
+				<%= link_to 'Destroy', vegetable, method: :delete, 
+				data: { confirm: 'Are you sure?' } %>
+			</td>
 		<% end %>
     <% end %>
   </tbody>
