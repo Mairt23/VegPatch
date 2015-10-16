@@ -7,7 +7,19 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<div id='navbar'>
+		<a class='navlink' href="http://localhost:3000">Home</a>
+		<a class='navlink' href="http://www...">My Allotment</a>
+		<a class='navlink' href="http://www...">Add A Tip</a>
+		<a class='navlink' href="http://www...">Contact us!</a>
+	</div>
 	<%= content_tag :body, class: controller.controller_name do %>
+		<div class='rightSide'>
+			<%= image_tag("vegImgRightLong") %>
+		</div>
+		<div class='leftSide'>
+			<%= image_tag("vegImgLeftLong") %>
+		</div>
 		<%= yield %>
 	<% end %>
 </body>

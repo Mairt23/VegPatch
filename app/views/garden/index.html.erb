@@ -2,7 +2,7 @@
   <p id="notice"><%= notice %></p>
 <% end %>
 
-<h1>Your Veggie database</h1>
+<h1>Your Veggie Database</h1>
 
 <% @vegetables.each do |vegetable| %>
   <div class="entry">
@@ -12,7 +12,8 @@
 	<%= sanitize vegetable.description %>
     <%= sanitize vegetable.tips %>
     <div class="rating_line">
-      <span class="rating"><%= vegetable.easiness_to_grow_rating %></span>
+      <span class="rating"><b>Easiness To Grow Rating: </b><%= vegetable.easiness_to_grow_rating %></span>
     </div>
+	<hr>
   </div>
 <% end %>
