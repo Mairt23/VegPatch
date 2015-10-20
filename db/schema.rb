@@ -11,12 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151020180410) do
+ActiveRecord::Schema.define(version: 20151020205652) do
 
   create_table "allotments", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "line_items", force: :cascade do |t|
+    t.integer  "vegetable_id"
+    t.integer  "allotment_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  add_index "line_items", ["allotment_id"], name: "index_line_items_on_allotment_id"
+  add_index "line_items", ["vegetable_id"], name: "index_line_items_on_vegetable_id"
 
   create_table "vegetables", force: :cascade do |t|
     t.string   "name"
