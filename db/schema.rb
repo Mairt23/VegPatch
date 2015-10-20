@@ -11,7 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151010163834) do
+ActiveRecord::Schema.define(version: 20151020180410) do
+
+  create_table "allotments", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "vegetables", force: :cascade do |t|
     t.string   "name"
