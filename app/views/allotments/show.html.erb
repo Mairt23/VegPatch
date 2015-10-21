@@ -1,4 +1,10 @@
-<p id="notice"><%= notice %></p>
+<% if notice %>
+  <p id="notice"><%= notice %></p>
+<% end %>
 
-<%= link_to 'Edit', edit_allotment_path(@allotment) %> |
-<%= link_to 'Back', allotments_path %>
+<h2>Your Allotment</h2>
+<ul>    
+  <% @allotment.line_items.each do |item| %>
+    <li><%= item.vegetable.name %></li>
+  <% end %>
+</ul>

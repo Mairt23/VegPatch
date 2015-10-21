@@ -12,7 +12,8 @@
 	<%= sanitize vegetable.description %>
     <%= sanitize vegetable.tips %>
     <div class="rating_line">
-      <span class="rating"><b>Easiness To Grow Rating: </b><%= vegetable.easiness_to_grow_rating %></span>
+		<%= button_to 'Add to Allotment', line_items_path(vegetable_id: vegetable) %>
+		<span class="rating"><b>Easiness To Grow Rating: </b><%= vegetable.easiness_to_grow_rating %></span>
     </div>
 	<hr>
   </div>

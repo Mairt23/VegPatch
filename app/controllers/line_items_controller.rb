@@ -1,4 +1,6 @@
 class LineItemsController < ApplicationController
+  include CurrentAllotment
+  before_action :set_allotment, only: [:create]	
   before_action :set_line_item, only: [:show, :edit, :update, :destroy]
 
   # GET /line_items
@@ -24,11 +26,12 @@ class LineItemsController < ApplicationController
   # POST /line_items
   # POST /line_items.json
   def create
-    @line_item = LineItem.new(line_item_params)
+    vegetable = Vegetable.find(params[:vegetable_id])
+	@line_item = @allotment.line_items.build(vegetable: vegetable)
 
     respond_to do |format|
       if @line_item.save
-        format.html { redirect_to @line_item, notice: 'Line item was successfully created.' }
+        format.html { redirect_to @line_item.allotment}
         format.json { render :show, status: :created, location: @line_item }
       else
         format.html { render :new }

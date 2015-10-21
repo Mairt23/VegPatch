@@ -18,10 +18,10 @@ class LineItemsControllerTest < ActionController::TestCase
 
   test "should create line_item" do
     assert_difference('LineItem.count') do
-      post :create, line_item: { allotment_id: @line_item.allotment_id, vegetable_id: @line_item.vegetable_id }
+      post :create, vegetable_id: vegetables(:validtest1)
     end
 
-    assert_redirected_to line_item_path(assigns(:line_item))
+    assert_redirected_to allotment_path(assigns(:line_item).allotment)
   end
 
   test "should show line_item" do
