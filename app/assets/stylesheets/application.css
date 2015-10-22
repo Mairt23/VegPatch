@@ -21,7 +21,7 @@ body {
  #navbar {
     margin-left: 120px;
     margin-right: 120px;
-    padding: 30px;
+    padding: 20px;
 	background-color: #FFFF19;
     border-left: solid;
     border-left-width: 10px;
@@ -31,7 +31,9 @@ body {
  }
 
 .navlink {
-    font-size: 16pt;
+    display: inline;
+    font-size: auto;
+    font-family: sans-serif;
     text-decoration: none;
     background-color: #66FF33;
     border-color: black;

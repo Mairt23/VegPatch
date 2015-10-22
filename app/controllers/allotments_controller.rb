@@ -1,4 +1,5 @@
 class AllotmentsController < ApplicationController
+  rescue_from ActiveRecord::RecordNotFound, with: :invalid_allotment
   before_action :set_allotment, only: [:show, :edit, :update, :destroy]
 
   # GET /allotments
@@ -62,6 +63,10 @@ class AllotmentsController < ApplicationController
   end
 
   private
+    def invalid_allotment
+		logger.error "Attempt to access invalid allotment #{params[:id]}"
+		redirect_to store_url, notice: 'Invalid allotment'
+	end
     # Use callbacks to share common setup or constraints between actions.
     def set_allotment
       @allotment = Allotment.find(params[:id])
