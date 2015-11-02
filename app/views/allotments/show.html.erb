@@ -4,7 +4,7 @@
 
 <h2>Your Allotment</h2>
 <ul>    
-  <% @allotment.line_items.each do |item| %>
-    <li><%= item.vegetable.name %></li>
-  <% end %>
+	<%= render @allotment.line_items %>
 </ul>
+
+<%= stylesheet_link_tag 'application' %>
