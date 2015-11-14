@@ -3,16 +3,18 @@
 <head>
   <title>VegPatch</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  
   <%= csrf_meta_tags %>
 </head>
 <body>
 	<div id='navbar'>
 		<ul>
 			<li class='navlink'><a href="http://localhost:3000">Home</a></li>
-			<li class='navlink'><%= link_to 'My Allotment', allotment_path(@allotment) %></li>
+			<% if session[:allotment_id] %>
+				<li class='navlink'><%= link_to 'My Allotment', allotment_path(@allotment) %></li>
+			<% end %>
 			<li class='navlink'><a href="http://www...">Add A Tip</a></li>
-			<li class='navlink'><a href="http://www...">Contact us!</a></li>
+			<li class='navlink'><a href="http://localhost:3000/static_pages/about">About</a></li>
+			<li class='navlink'><a href="http://localhost:3000/static_pages/contact">Contact us!</a></li>
 		</ul>
 	</div>
 	<%= content_tag :body, class: controller.controller_name do %>
@@ -22,7 +24,9 @@
 		<div class='leftSide'>
 			<%= image_tag("vegImgLeftLong") %>
 		</div>
-		<%= yield %>
+		<div class='pageContent'>
+			<%= yield %>
+		</div>
 	<% end %>
 </body>
 </html>

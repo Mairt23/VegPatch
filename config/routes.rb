@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'static_pages/contact'
+
+  get 'static_pages/about'
+
   resources :line_items
   resources :allotments
   get 'garden/index'

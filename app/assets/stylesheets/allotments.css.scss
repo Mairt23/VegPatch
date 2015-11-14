@@ -1,0 +1,28 @@
+// Place all the styles related to the allotments controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.allotments{
+	text-align: center;
+	color: Yellow;
+	background-image: image-url("grass.png");
+	table{
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: 0px;
+		border: solid;
+		border-color: black;
+		border-collapse: collapse;
+		background-image: image-url("soil.png");
+		tr{
+			color: white;
+		}
+		td{
+			padding: 10px;
+			img{
+				width: 100px;
+				height: 100px;
+			}
+		}
+	}
+}

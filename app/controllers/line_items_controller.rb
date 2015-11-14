@@ -1,6 +1,4 @@
 class LineItemsController < ApplicationController
-  include CurrentAllotment
-  before_action :set_allotment, only: [:create]	
   before_action :set_line_item, only: [:show, :edit, :update, :destroy]
 
   # GET /line_items

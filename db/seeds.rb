@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 Vegetable.delete_all
 
-Vegetable.create!(name: 'carrot',
+Vegetable.create!(name: 'Carrot',
 	instructions:
 	%{<p>
 		Sow thickly out in the soil March to May.  Harvest thinnings at 
@@ -30,7 +30,7 @@ Vegetable.create!(name: 'carrot',
 	image_url: 'carrot.jpg',
 	easiness_to_grow_rating: 9)
 
-Vegetable.create!(name: 'cabbage',
+Vegetable.create!(name: 'Cabbage',
 	instructions:
 	%{<p>
 		Sow thickly out in the soil April to May.  Transplant all the 
