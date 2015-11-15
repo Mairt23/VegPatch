@@ -1,0 +1,32 @@
+<% if notice %>
+	<p id="notice"><%= notice %></p>
+<% end %>
+	
+<h1>Listing Extra Tips</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Tip</th>
+      <th>Vegetable</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @extra_tips.each do |extra_tip| %>
+      <tr>
+        <td><%= extra_tip.name %></td>
+        <td><%= extra_tip.email %></td>
+        <td><%= extra_tip.tip %></td>
+        <td><%= extra_tip.vegetable %></td>
+        <td><%= button_to 'Reject', @extra_tip, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+

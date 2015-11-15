@@ -1,6 +1,8 @@
 class Vegetable < ActiveRecord::Base
 	before_destroy :ensure_not_referenced_by_any_line_item
 	has_many :line_items
+	before_destroy :ensure_not_referenced_by_any_extra_tip
+	has_many :extra_tips, dependent: :destroy
 	validates :name, :instructions, :description, :image_url, presence: true
 	validates :name, uniqueness: true
 	validates :name, length: {minimum: 2}
@@ -14,6 +16,18 @@ class Vegetable < ActiveRecord::Base
 			return true
 		else
 			errors.add(:base, 'Line Items present')
+			return false
+		end
+	end
+	
+	private
+
+	# ensure that there are no extra tips referencing this product
+	def ensure_not_referenced_by_any_extra_tip
+		if extra_tips.empty?
+			return true
+		else
+			errors.add(:base, 'Tips witing to be added present')
 			return false
 		end
 	end
