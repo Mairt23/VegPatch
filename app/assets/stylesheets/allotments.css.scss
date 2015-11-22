@@ -6,10 +6,10 @@
 	text-align: center;
 	color: Yellow;
 	background-image: image-url("grass.png");
-	table{
-		margin-left: auto;
-		margin-right: auto;
-		padding-left: 0px;
+	.allotTable{
+		width: 20%;
+		margin-right: 40%;
+		margin-left: 40%;
 		border: solid;
 		border-color: black;
 		border-collapse: collapse;

@@ -18,7 +18,7 @@ class ExtraTipsControllerTest < ActionController::TestCase
 
   test "should create extra_tip" do
     assert_difference('ExtraTip.count') do
-      post :create, extra_tip: { email: @extra_tip.email, name: @extra_tip.name, tip: @extra_tip.tip, vegetable_id: @extra_tip.vegetable_id }
+      post :create, extra_tip: { email: @extra_tip.email, name: @extra_tip.name, tip: 'cool cabbage', vegetable_id: @extra_tip.vegetable_id }
     end
 
     assert_redirected_to garden_path

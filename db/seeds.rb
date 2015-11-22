@@ -50,3 +50,7 @@ Vegetable.create!(name: 'Cabbage',
 	</p>},
 	image_url: 'cabbage.JPG',
 	easiness_to_grow_rating: 7)
+	
+User.delete_all
+
+User.create!(name: 'benny', password: 'password')

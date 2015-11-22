@@ -59,3 +59,47 @@ div.leftSide img {
 div.rating_line {
     text-align: center;
 }
+
+.vegP_form {
+  margin-left: 300px;
+  margin-right: 300px;
+  
+  fieldset {
+	margin-left: auto;
+	margin-right: auto;
+	width: 500px;
+    background: #66ff33;
+	border-radius: 10px;
+
+    legend {
+      color: #dfd;
+      background: #ff1a1a;
+      font-family: sans-serif;
+      padding: 0.2em 1em;
+	  border-radius: 10px;
+    }
+  }
+
+  form {
+    label {
+      width: 3em;
+      float: left;
+      text-align: right;
+      padding-top: 0.2em;
+      margin-right: 0.1em;
+      display: block;
+    }
+
+    select, textarea, input {
+      margin-left: 0.5em;
+    }
+
+    .submit {
+      margin-left: 4em;
+    }
+
+    br {
+      display: none;
+    }
+  }
+}

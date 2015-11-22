@@ -1,11 +1,12 @@
 class AllotmentsController < ApplicationController
+  skip_before_action :authorize, only: [:show, :create, :update, :destroy]
   rescue_from ActiveRecord::RecordNotFound, with: :invalid_allotment
-  before_action :set_allotment, only: [:show, :edit, :update, :destroy]
+  before_action :set_allotment, only: [:index, :show, :edit, :update, :destroy]
 
   # GET /allotments
   # GET /allotments.json
   def index
-    @allotments = Allotment.all
+    @all_allotments = Allotment.all
   end
 
   # GET /allotments/1
@@ -65,12 +66,12 @@ class AllotmentsController < ApplicationController
   private
     def invalid_allotment
 		logger.error "Attempt to access invalid allotment #{params[:id]}"
-		redirect_to store_url, notice: 'Invalid allotment'
+		redirect_to garden_url, notice: 'Invalid allotment'
 	end
     # Use callbacks to share common setup or constraints between actions.
-    def set_allotment
-      @allotment = Allotment.find(params[:id])
-    end
+#    def set_allotment
+#      @allotment = Allotment.find(params[:id])
+#    end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def allotment_params

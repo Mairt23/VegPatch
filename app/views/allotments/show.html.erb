@@ -1,10 +1,8 @@
-<%= stylesheet_link_tag 'allotment' %>
-
 <% if notice %>
   <p id="notice"><%= notice %></p>
 <% end %>
 
 <h2>Your Allotment</h2>
-<table>
+<table class=allotTable>
 	<%= render @allotment.line_items %>
 </table>

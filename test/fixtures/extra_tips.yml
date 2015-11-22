@@ -3,11 +3,11 @@
 one:
   name: MyString
   email: MyString
-  tip: MyText
-  vegetable_id: 
+  tip: MyTip1
+  vegetable_id: 5
 
 two:
   name: MyString
   email: MyString
-  tip: MyText
-  vegetable_id: 
+  tip: MyTip2
+  vegetable_id: 6
