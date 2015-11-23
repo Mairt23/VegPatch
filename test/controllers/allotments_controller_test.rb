@@ -8,7 +8,7 @@ class AllotmentsControllerTest < ActionController::TestCase
   test "should get index" do
     get :index
     assert_response :success
-    assert_not_nil assigns(:allotments)
+    assert_not_nil assigns(:all_allotments)
   end
 
   test "should get new" do

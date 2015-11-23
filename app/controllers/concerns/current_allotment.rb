@@ -3,10 +3,10 @@ module CurrentAllotment
 
   private
 
-  def set_allotment 
-    @allotment = Allotment.find(session[:allotment_id])
+  def set_cur_allotment 
+    @cur_allotment = Allotment.find(session[:allotment_id])
   rescue ActiveRecord::RecordNotFound
-	@allotment = Allotment.create
-	session[:allotment_id] = @allotment.id
+	@cur_allotment = Allotment.create
+	session[:allotment_id] = @cur_allotment.id
   end
 end

@@ -26,7 +26,7 @@ class LineItemsController < ApplicationController
   # POST /line_items.json
   def create
     vegetable = Vegetable.find(params[:vegetable_id])
-	@line_item = @allotment.line_items.build(vegetable: vegetable)
+	@line_item = @cur_allotment.line_items.build(vegetable: vegetable)
 
     respond_to do |format|
       if @line_item.save
