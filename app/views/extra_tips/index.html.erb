@@ -22,7 +22,7 @@
         <td><%= extra_tip.email %></td>
         <td><%= extra_tip.tip %></td>
         <td><%= extra_tip.vegetable %></td>
-		<td><%= button_to 'Accept', Vegetable.find(extra_tip.vegetable_id), vegetable_params: {tips: extra_tip.tip}, method: :put %></td>
+		<td><%= button_to 'Accept', extra_tip_path(extra_tip, accepted: true), method: :put %></td>
         <td><%= button_to 'Reject/Delete', extra_tip, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>

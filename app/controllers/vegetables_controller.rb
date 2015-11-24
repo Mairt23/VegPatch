@@ -42,7 +42,7 @@ class VegetablesController < ApplicationController
   def update
     respond_to do |format|
       if @vegetable.update(vegetable_params)
-        format.html { redirect_to @vegetable, notice: 'Vegetable was successfully updated.' }
+        format.html { redirect_to extra_tips_path, notice: 'Vegetable was successfully updated.' }
         format.json { render :show, status: :ok, location: @vegetable }
       else
         format.html { render :edit }

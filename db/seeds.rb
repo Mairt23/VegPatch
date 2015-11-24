@@ -51,6 +51,51 @@ Vegetable.create!(name: 'Cabbage',
 	image_url: 'cabbage.JPG',
 	easiness_to_grow_rating: 7)
 	
+Vegetable.create!(name: 'Potato',
+	instructions:
+	%{<p>
+		Leave seed potatoes in the sun to chit before planting roughly 40cm
+		apart in late March. Spray regularly for blight. Potatoes should be
+		available from August onwards. Harvest when foliage dies away.
+	</p>},
+	description:
+	%{<p>
+		Native to North America, potatoes are one of the easiest sources of 
+		carbohydrate to grow in your back garden. They are also a good source
+		of potassium.
+	</p>},
+	tips:
+	%{<p>
+		Pour soil around the base of stems of plants to improve yields. Whenever
+		the weather becomes humid blight will thrive. At the first sign of blight
+		pull up the offending plant and burn it.
+	</p>},
+	image_url: 'potato.jpg',
+	easiness_to_grow_rating: 6)
+	
+Vegetable.create!(name: 'Peas',
+	instructions:
+	%{<p>
+		Plant individual peas out in April about 15cm apart(row wise) but 
+		keep the rows well apart(100/150cm). Pick regularly when pods become fat. 
+		The first harvest should be available around mid-June and will continue 
+		to be available until September weather permitting.
+	</p>},
+	description:
+	%{<p>
+		Sweet and tasty these peas are full of vitamins and nutrients. All
+		peas you grow yourself will be better than any shop bought varieties.
+	</p>},
+	tips:
+	%{<p>
+		Keep harvesting the pods otherwise the plants will stop producing new
+		flowers. Watch out for hidden pods in the middle of the plants.
+	</p>},
+	image_url: 'peas.jpg',
+	easiness_to_grow_rating: 9)
+	
 User.delete_all
 
 User.create!(name: 'benny', password: 'password')
+
+Extra_Tip.delete_all
