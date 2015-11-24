@@ -26,6 +26,7 @@
   <div class="field">
 	<%= f.label :vegetable %><br>
 	<%= f.select :vegetable_id, Vegetable.all.map{ |x| [x.name, x.id] }, prompt: "Select vegetable to add tip for" %>
+  </div>
   <div class="actions">
     <%= f.submit 'Submit this tip' %>
   </div>

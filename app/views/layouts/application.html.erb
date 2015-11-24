@@ -18,6 +18,8 @@
 			<% if session[:user_id] %>
 				<li class='navlink'><%= link_to 'Admin Page', admin_path %><br /></li>
 				<%= button_to 'Admin Logout', logout_path, :method => :delete, class: "navbutton" %>
+			<% else %>
+				<%= button_to 'Admin Login', login_path, :method => :get, class: "navbutton" %>
 			<% end %>
 		</ul>
 	</div>

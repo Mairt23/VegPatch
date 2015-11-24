@@ -97,5 +97,3 @@ Vegetable.create!(name: 'Peas',
 User.delete_all
 
 User.create!(name: 'benny', password: 'password')
-
-Extra_Tip.delete_all

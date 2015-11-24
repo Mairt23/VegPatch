@@ -70,6 +70,6 @@ class ExtraTipsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def extra_tip_params
-      params.require(:extra_tip).permit(:name, :email, :tip, :vegetable_id)
+      params.require(:extra_tip).permit(:name, :email, :tip, :vegetable_id, :accepted)
     end
 end
