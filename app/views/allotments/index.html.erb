@@ -2,16 +2,11 @@
 
 <h1>Listing Allotments</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
+<table class='allotmentList'>
   <tbody>
     <% @all_allotments.each do |allotment| %>
       <tr>
+	    <td><%= allotment.id %></td>
         <td><%= link_to 'Show', allotment %></td>
         <td><%= link_to 'Edit', edit_allotment_path(allotment) %></td>
         <td><%= link_to 'Destroy', allotment, method: :delete, data: { confirm: 'Are you sure?' } %></td>

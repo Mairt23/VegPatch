@@ -8,9 +8,9 @@
   <div class="entry">
     <%= image_tag(vegetable.image_url) %>
     <h3><%= vegetable.name %></h3>
-	<%= sanitize vegetable.instructions %>
-	<%= sanitize vegetable.description %>
-    <%= sanitize vegetable.tips %>
+	<b>Growing Instructions:</b><%= sanitize vegetable.instructions %>
+	<b>Useful Info:</b><%= sanitize vegetable.description %>
+    <b>Tips:</b><%= sanitize vegetable.tips %>
     <div class="rating_line">
 		<%= button_to 'Add to Allotment', line_items_path(vegetable_id: vegetable) %>
 		<span class="rating"><b>Easiness To Grow Rating: </b><%= vegetable.easiness_to_grow_rating %></span>

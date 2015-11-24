@@ -6,6 +6,7 @@ h1 {
 }
 
 h3 {
+	font-size: large;
     text-align: center;
 }
 
@@ -17,6 +18,7 @@ h3 {
         margin: auto;
     }
     p {
+		display: block;
         text-align: center;
     }
 }
